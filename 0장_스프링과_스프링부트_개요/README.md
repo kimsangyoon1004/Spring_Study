@@ -6,20 +6,20 @@
 
 ### 1.1 한 줄 정의
 
-> **엔터프라이즈용 Java 애플리케이션 개발을 편하게 할 수 있게 해주는 오픈소스 경량급 애플리케이션 프레임워크**
+> <strong>엔터프라이즈용 Java 애플리케이션 개발을 편하게 할 수 있게 해주는 오픈소스 경량급 애플리케이션 프레임워크</strong>
 
-쉽게 말하면, **기업용 웹 서비스를 만들 때 반복되는 귀찮은 일을 대신 해주는 Java 도구상자**라고 생각하면 된다.
+쉽게 말하면, <strong>기업용 웹 서비스를 만들 때 반복되는 귀찮은 일을 대신 해주는 Java 도구상자</strong>라고 생각하면 된다.
 
 ---
 
 ### 1.2 비유로 이해하기
 
-**자동차를 만든다고 생각해보자.**
+<strong>자동차를 만든다고 생각해보자.</strong>
 
-- **프레임워크 없이**: 바퀴, 엔진, 차체, 내부장치를 전부 직접 설계·제작해야 함
-- **스프링 사용**: 이미 만들어진 차체(뼈대)를 가져다 쓰고, 우리가 필요한 기능만 붙이면 됨
+- <strong>프레임워크 없이</strong>: 바퀴, 엔진, 차체, 내부장치를 전부 직접 설계·제작해야 함
+- <strong>스프링 사용</strong>: 이미 만들어진 차체(뼈대)를 가져다 쓰고, 우리가 필요한 기능만 붙이면 됨
 
-스프링은 **웹 애플리케이션의 뼈대**를 미리 만들어둔 것이다. 우리는 <strong>비즈니스 로직</strong>(주문하기, 결제하기 등)에만 집중하면 된다.
+스프링은 <strong>웹 애플리케이션의 뼈대</strong>를 미리 만들어둔 것이다. 우리는 <strong>비즈니스 로직</strong>(주문하기, 결제하기 등)에만 집중하면 된다.
 
 ---
 
@@ -29,28 +29,28 @@
 
 2000년대 초반, <strong>EJB(Enterprise Java Bean)</strong>가 기업용 Java 개발의 표준이었다.
 
-- **EJB의 아이디어**: "비즈니스 객체들을 컨테이너에서 관리하고, 필요할 때 꺼내 쓰자"
-- **문제**: 컨테이너의 보안, 트랜잭션 등을 쓰려면 <strong>EJB 스펙을 꼭 지켜야</strong> 함
+- <strong>EJB의 아이디어</strong>: "비즈니스 객체들을 컨테이너에서 관리하고, 필요할 때 꺼내 쓰자"
+- <strong>문제</strong>: 컨테이너의 보안, 트랜잭션 등을 쓰려면 <strong>EJB 스펙을 꼭 지켜야</strong> 함
 
 #### EJB의 한계
 
 | 문제 | 설명 |
 |------|------|
-| **기술 침투** | 비즈니스 로직에 EJB 기술이 강하게 묶여 있음. EJB를 바꾸면 코드 전체를 고쳐야 함 |
-| **코드 비대화** | 실제로 필요한 메서드는 3개인데, EJB 스펙을 지키려는 코드가 훨씬 더 많아짐 |
-| **벤더 종속** | WebLogic, Jeus 등 벤더마다 구현이 달라서, 다른 서버로 옮기기 어려움 |
-| **복잡한 설정** | 초기 설정이 너무 복잡함 |
+| <strong>기술 침투</strong> | 비즈니스 로직에 EJB 기술이 강하게 묶여 있음. EJB를 바꾸면 코드 전체를 고쳐야 함 |
+| <strong>코드 비대화</strong> | 실제로 필요한 메서드는 3개인데, EJB 스펙을 지키려는 코드가 훨씬 더 많아짐 |
+| <strong>벤더 종속</strong> | WebLogic, Jeus 등 벤더마다 구현이 달라서, 다른 서버로 옮기기 어려움 |
+| <strong>복잡한 설정</strong> | 초기 설정이 너무 복잡함 |
 
-**기술 침투**란, <strong>내 비즈니스 로직이 특정 기술(EJB, 특정 DB 등)에 묶여 있어서, 그 기술을 바꾸면 코드를 전부 수정해야 하는 상태</strong>를 말한다.
+<strong>기술 침투</strong>란, <strong>내 비즈니스 로직이 특정 기술(EJB, 특정 DB 등)에 묶여 있어서, 그 기술을 바꾸면 코드를 전부 수정해야 하는 상태</strong>를 말한다.
 
 #### 스프링의 탄생
 
 <strong>로드 존슨(Rod Johnson)</strong>이 2002년 저서 *Expert One-on-One J2EE Design and Development*에서 제시한 코드가 스프링의 시초다.
 
-- **핵심 아이디어**: EJB 없이도 <strong>객체 간 의존성을 해결</strong>할 수 있는 컨테이너를 만들자
-- **철학**: **기술 비침투** — 특정 기술에 묶이지 않고, 순수 Java 객체만으로 개발
+- <strong>핵심 아이디어</strong>: EJB 없이도 <strong>객체 간 의존성을 해결</strong>할 수 있는 컨테이너를 만들자
+- <strong>철학</strong>: <strong>기술 비침투</strong> — 특정 기술에 묶이지 않고, 순수 Java 객체만으로 개발
 
-즉, **비즈니스 로직에만 집중하고, 기술적인 부분은 스프링이 알아서 처리해준다**가 스프링의 **기본 철학**이다.
+즉, <strong>비즈니스 로직에만 집중하고, 기술적인 부분은 스프링이 알아서 처리해준다</strong>가 스프링의 <strong>기본 철학</strong>이다.
 
 #### 버전 이력 (참고)
 
@@ -68,10 +68,10 @@
 
 | 용어 | 의미 | 쉽게 말하면 |
 |------|------|-------------|
-| **엔터프라이즈용** | 기업에서 쓰는 대규모 웹 서비스 | 카카오, 네이버 같은 서비스 수준의 개발 |
-| **오픈소스** | 소스코드가 공개되어 있고, 무료로 사용 가능 | SpringSource(VMware)가 관리해 안정적 |
-| **경량급** | EJB 대비 코드가 단순하고 가벼움 | 불필요한 보일러플레이트 코드가 적음 |
-| **애플리케이션 프레임워크** | 웹 개발에 필요한 여러 기술의 뼈대를 한 번에 제공 | DB, 보안, 웹, 트랜잭션 등 전반을 지원 |
+| <strong>엔터프라이즈용</strong> | 기업에서 쓰는 대규모 웹 서비스 | 카카오, 네이버 같은 서비스 수준의 개발 |
+| <strong>오픈소스</strong> | 소스코드가 공개되어 있고, 무료로 사용 가능 | SpringSource(VMware)가 관리해 안정적 |
+| <strong>경량급</strong> | EJB 대비 코드가 단순하고 가벼움 | 불필요한 보일러플레이트 코드가 적음 |
+| <strong>애플리케이션 프레임워크</strong> | 웹 개발에 필요한 여러 기술의 뼈대를 한 번에 제공 | DB, 보안, 웹, 트랜잭션 등 전반을 지원 |
 
 ---
 
@@ -81,11 +81,11 @@
 
 #### POJO란?
 
-**오래된 방식의 단순한 Java 객체** — 즉, **순수 Java만**으로 만든 객체다.
+<strong>오래된 방식의 단순한 Java 객체</strong> — 즉, <strong>순수 Java만</strong>으로 만든 객체다.
 
-- **`extends`**로 특정 클래스를 상속받지 않음
-- **`implements`**로 특정 인터페이스를 구현하지 않음 (비즈니스 목적 제외)
-- **외부 라이브러리·프레임워크에 의존하지 않음**
+- <strong>`extends`</strong>로 특정 클래스를 상속받지 않음
+- <strong>`implements`</strong>로 특정 인터페이스를 구현하지 않음 (비즈니스 목적 제외)
+- <strong>외부 라이브러리·프레임워크에 의존하지 않음</strong>
 
 #### 왜 중요한가?
 
@@ -101,7 +101,7 @@ OrderService는 순수 Java만 사용
 → 설정만 바꾸면 됨
 ```
 
-**정리**: POJO는 **특정 기술에 묶이지 않아서**, 기술이 바뀌어도 **코드를 덜 고치고**, **테스트·디버깅이 쉬워진다.**
+<strong>정리</strong>: POJO는 <strong>특정 기술에 묶이지 않아서</strong>, 기술이 바뀌어도 <strong>코드를 덜 고치고</strong>, <strong>테스트·디버깅이 쉬워진다.</strong>
 
 ---
 
@@ -120,7 +120,7 @@ class OrderService {
 }
 ```
 
-- `OrderService`가 `KakaoPayment`를 **직접** 만들고 있음
+- `OrderService`가 `KakaoPayment`를 <strong>직접</strong> 만들고 있음
 - 나중에 `TossPayment`로 바꾸려면? → `OrderService` 코드를 수정해야 함
 - <strong>제어권이 개발자(클래스)에게 있음</strong>
 
@@ -145,7 +145,7 @@ class OrderService {
 - <strong>누가, 어떤 구현체(KakaoPayment, TossPayment)를 넣어줄지는 스프링이 결정</strong>
 - 결제사만 바꾸고 싶다면 → 설정만 바꾸면 됨, `OrderService` 코드는 그대로
 
-**정리**: IoC = <strong>객체 생성·연결의 제어권</strong>이 <strong>개발자 → 스프링(컨테이너)</strong>로 넘어가는 것
+<strong>정리</strong>: IoC = <strong>객체 생성·연결의 제어권</strong>이 <strong>개발자 → 스프링(컨테이너)</strong>로 넘어가는 것
 
 ---
 
@@ -153,7 +153,7 @@ class OrderService {
 
 #### 의존성이란?
 
-A가 B의 메서드를 호출하면 → **A는 B에 의존한다**고 한다.
+A가 B의 메서드를 호출하면 → <strong>A는 B에 의존한다</strong>고 한다.
 
 ```java
 class A {
@@ -183,16 +183,16 @@ class A {
 }
 ```
 
-- A는 B를 **직접 생성하지 않음**
-- 스프링이 B 인스턴스를 만들고, A의 생성자에 **주입**해줌
+- A는 B를 <strong>직접 생성하지 않음</strong>
+- 스프링이 B 인스턴스를 만들고, A의 생성자에 <strong>주입</strong>해줌
 
 #### DI의 장점
 
 | 장점 | 설명 |
 |------|------|
-| **느슨한 결합** | A가 B 구현체에 묶이지 않음. B를 바꿔도 A 코드 수정 불필요 |
-| **테스트 용이** | 테스트할 때 가짜 B(Mock)를 넣어주기 쉬움 |
-| **유연한 변경** | 설정만 바꿔서 다른 구현체로 교체 가능 |
+| <strong>느슨한 결합</strong> | A가 B 구현체에 묶이지 않음. B를 바꿔도 A 코드 수정 불필요 |
+| <strong>테스트 용이</strong> | 테스트할 때 가짜 B(Mock)를 넣어주기 쉬움 |
+| <strong>유연한 변경</strong> | 설정만 바꿔서 다른 구현체로 교체 가능 |
 
 ---
 
@@ -200,7 +200,7 @@ class A {
 
 #### 문제 상황
 
-주문, 결제, 회원가입, 상품등록... 모든 기능에 **로깅**, **보안 체크**, **트랜잭션**이 필요하다.
+주문, 결제, 회원가입, 상품등록... 모든 기능에 <strong>로깅</strong>, <strong>보안 체크</strong>, <strong>트랜잭션</strong>이 필요하다.
 
 ```java
 void 주문하기() {
@@ -221,13 +221,13 @@ void 결제하기() {
 }
 ```
 
-- **공통 코드가 모든 메서드에 반복**됨
+- <strong>공통 코드가 모든 메서드에 반복</strong>됨
 - 로깅 방식이 바뀌면 → 모든 메서드를 찾아서 수정해야 함
 
 #### AOP의 해결 방식
 
-**공통 관심 사항**(로깅, 보안, 트랜잭션)을 <strong>별도 모듈(Aspect)</strong>로 분리하고,  
-필요한 시점에 **자동으로 끼워 넣는** 방식이다.
+<strong>공통 관심 사항</strong>(로깅, 보안, 트랜잭션)을 <strong>별도 모듈(Aspect)</strong>로 분리하고,  
+필요한 시점에 <strong>자동으로 끼워 넣는</strong> 방식이다.
 
 ```
 [분리 전]
@@ -243,7 +243,7 @@ void 결제하기() {
 + [공통 모듈] 로깅, 보안, 트랜잭션 → 스프링이 알아서 필요한 곳에 적용
 ```
 
-**정리**: AOP = **여러 곳에 반복되는 공통 기능**을 **한 곳에서 관리**하게 해주는 것
+<strong>정리</strong>: AOP = <strong>여러 곳에 반복되는 공통 기능</strong>을 <strong>한 곳에서 관리</strong>하게 해주는 것
 
 ---
 
@@ -256,7 +256,7 @@ void 결제하기() {
 
 #### PSA의 해결 방식
 
-스프링이 <strong>공통 인터페이스(추상화)</strong>를 제공해서, **같은 방식으로** 여러 기술을 쓰게 해준다.
+스프링이 <strong>공통 인터페이스(추상화)</strong>를 제공해서, <strong>같은 방식으로</strong> 여러 기술을 쓰게 해준다.
 
 ```
 [PSA 없이]
@@ -266,10 +266,10 @@ MySQL 코드 ≠ Oracle 코드 ≠ MariaDB 코드  → DB 바꿀 때마다 코�
 공통 인터페이스로 작성 → DB만 바꿔도 기존 코드 그대로 사용 가능
 ```
 
-- **JDBC**: DB 접근을 추상화 → DB 벤더가 바뀌어도 코드 유지
+- <strong>JDBC</strong>: DB 접근을 추상화 → DB 벤더가 바뀌어도 코드 유지
 - <strong>Spring Data JPA</strong>: JPA를 한 번 더 추상화 → 구현체(Hibernate 등) 교체 용이
 
-**정리**: PSA = **기술을 추상화**해서, **바꿔도 코드를 최대한 그대로** 쓸 수 있게 해주는 것
+<strong>정리</strong>: PSA = <strong>기술을 추상화</strong>해서, <strong>바꿔도 코드를 최대한 그대로</strong> 쓸 수 있게 해주는 것
 
 ---
 
@@ -277,36 +277,36 @@ MySQL 코드 ≠ Oracle 코드 ≠ MariaDB 코드  → DB 바꿀 때마다 코�
 
 ### 3.1 컨테이너란?
 
-**객체(Bean)를 만들고, 관리하고, 필요할 때 꺼내 쓰게 해주는 "공장"**이라고 생각하면 된다.
+<strong>객체(Bean)를 만들고, 관리하고, 필요할 때 꺼내 쓰게 해주는 "공장"</strong>이라고 생각하면 된다.
 
 - <strong>Bean Factory</strong> / <strong>IoC Container</strong>라고도 부름
 - 스프링이 객체의 <strong>생성 → 의존성 주입 → 생명주기</strong>를 관리함
 
 ### 3.2 왜 필요한가?
 
-- 개발자가 **`new`**로 객체를 만들지 않아도 됨
-- **의존 관계**를 스프링이 설정에 따라 **자동으로 연결**해 줌
-- **싱글톤** 등 객체 생명주기도 컨테이너가 관리
+- 개발자가 <strong>`new`</strong>로 객체를 만들지 않아도 됨
+- <strong>의존 관계</strong>를 스프링이 설정에 따라 <strong>자동으로 연결</strong>해 줌
+- <strong>싱글톤</strong> 등 객체 생명주기도 컨테이너가 관리
 
 ### 3.3 핵심 정리
 
-> **스프링의 핵심 = 기술 비침투 + IoC/DI + POJO**  
+> <strong>스프링의 핵심 = 기술 비침투 + IoC/DI + POJO</strong>  
 > 비즈니스 로직에만 집중하고, 객체 생성·연결·공통 기능은 스프링이 담당한다.
 
 ---
 
 ## 4. 스프링 프레임워크 모듈 구조
 
-스프링은 **필요한 것만 골라 쓸 수 있는 모듈형** 구조다.
+스프링은 <strong>필요한 것만 골라 쓸 수 있는 모듈형</strong> 구조다.
 
 | 모듈 | 역할 |
 |------|------|
-| **Spring Core** | IoC 컨테이너, Bean 관리, DI |
-| **Spring AOP** | 관점 지향 프로그래밍 |
-| **Spring Web MVC** | 웹 애플리케이션, MVC 패턴 |
-| **Spring Data** | DB 접근 단순화 (JPA, JDBC 등) |
-| **Spring Security** | 인증, 권한, 보안 |
-| **Spring Batch** | 대량 데이터 처리 |
+| <strong>Spring Core</strong> | IoC 컨테이너, Bean 관리, DI |
+| <strong>Spring AOP</strong> | 관점 지향 프로그래밍 |
+| <strong>Spring Web MVC</strong> | 웹 애플리케이션, MVC 패턴 |
+| <strong>Spring Data</strong> | DB 접근 단순화 (JPA, JDBC 등) |
+| <strong>Spring Security</strong> | 인증, 권한, 보안 |
+| <strong>Spring Batch</strong> | 대량 데이터 처리 |
 
 ---
 
@@ -314,18 +314,18 @@ MySQL 코드 ≠ Oracle 코드 ≠ MariaDB 코드  → DB 바꿀 때마다 코�
 
 ### 5.1 스프링의 불편한 점
 
-스프링만 쓰면 **초기 설정이 많고 복잡**하다. **XML**, **Java 설정**, **의존성 버전 맞추기** 등...
+스프링만 쓰면 <strong>초기 설정이 많고 복잡</strong>하다. <strong>XML</strong>, <strong>Java 설정</strong>, <strong>의존성 버전 맞추기</strong> 등...
 
 ### 5.2 스프링 부트의 역할
 
-**스프링으로 개발할 때 필요한 설정을 최대한 자동으로 해주는 도구**
+<strong>스프링으로 개발할 때 필요한 설정을 최대한 자동으로 해주는 도구</strong>
 
 | 기능 | 설명 |
 |------|------|
-| **자동 설정** | 필요한 라이브러리·설정을 자동으로 적용 |
-| **내장 웹 서버** | Tomcat 등이 포함되어 있어 별도 WAS 설치 불필요 |
-| **독립 실행 Jar** | `java -jar app.jar` 한 줄로 실행 가능 |
-| **Starter 의존성** | `spring-boot-starter-web` 하나로 웹 개발에 필요한 것 한 번에 추가 |
+| <strong>자동 설정</strong> | 필요한 라이브러리·설정을 자동으로 적용 |
+| <strong>내장 웹 서버</strong> | Tomcat 등이 포함되어 있어 별도 WAS 설치 불필요 |
+| <strong>독립 실행 Jar</strong> | `java -jar app.jar` 한 줄로 실행 가능 |
+| <strong>Starter 의존성</strong> | `spring-boot-starter-web` 하나로 웹 개발에 필요한 것 한 번에 추가 |
 
 ### 5.3 스프링 vs 스프링 부트
 
@@ -341,25 +341,25 @@ MySQL 코드 ≠ Oracle 코드 ≠ MariaDB 코드  → DB 바꿀 때마다 코�
 
 ### 6.1 사전 조건
 
-1. **JDK** 설치 (Java 17 권장)
-2. **JAVA_HOME** 환경 변수 설정
-3. **IDE** (IntelliJ, Eclipse 등)
+1. <strong>JDK</strong> 설치 (Java 17 권장)
+2. <strong>JAVA_HOME</strong> 환경 변수 설정
+3. <strong>IDE</strong> (IntelliJ, Eclipse 등)
 
 ### 6.2 Spring Initializr로 프로젝트 생성
 
 1. [start.spring.io](https://start.spring.io/) 접속
-2. **Project**: Maven 또는 Gradle
-3. **Language**: Java
-4. **Spring Boot**: 최신 안정 버전 (SNAPSHOT 제외)
-5. **Project Metadata**: Group, Artifact, Name 등 입력
-6. **Dependencies**: `Spring Web` 추가
-7. **GENERATE** 클릭 → zip 다운로드
+2. <strong>Project</strong>: Maven 또는 Gradle
+3. <strong>Language</strong>: Java
+4. <strong>Spring Boot</strong>: 최신 안정 버전 (SNAPSHOT 제외)
+5. <strong>Project Metadata</strong>: Group, Artifact, Name 등 입력
+6. <strong>Dependencies</strong>: `Spring Web` 추가
+7. <strong>GENERATE</strong> 클릭 → zip 다운로드
 8. 압축 해제 후 IDE에서 열기
 9. `main()` 메서드 실행 → `Started xxxApplication in x.xxx seconds` 확인
 
 ### 6.3 실행 확인
 
-콘솔에 **`Started xxxApplication`**이 보이고, 실행 아이콘이 계속 돌고 있으면  
+콘솔에 <strong>`Started xxxApplication`</strong>이 보이고, 실행 아이콘이 계속 돌고 있으면  
 <strong>내장 웹 서버(WAS)가 정상적으로 떠 있는 상태</strong>다.
 
 ---
@@ -368,12 +368,12 @@ MySQL 코드 ≠ Oracle 코드 ≠ MariaDB 코드  → DB 바꿀 때마다 코�
 
 | 개념 | 한 줄 요약 |
 |------|------------|
-| **스프링** | 기업용 Java 웹 개발을 쉽게 해주는 오픈소스 프레임워크 |
+| <strong>스프링</strong> | 기업용 Java 웹 개발을 쉽게 해주는 오픈소스 프레임워크 |
 | <strong>EJB → 스프링</strong> | 기술 침투·복잡함을 줄이려고 탄생 |
-| **POJO** | 순수 Java 객체, 특정 기술에 묶이지 않음 |
-| **IoC** | 객체 생성·연결을 스프링이 담당 (제어권 역전) |
-| **DI** | 의존 객체를 외부에서 주입받음 |
-| **AOP** | 로깅·보안 등 공통 기능을 분리해서 관리 |
-| **PSA** | 기술을 추상화해서 교체해도 코드 유지 |
-| **스프링 컨테이너** | Bean을 생성·관리하는 IoC 컨테이너 |
-| **스프링 부트** | 스프링 초기 설정을 자동화해주는 도구 |
+| <strong>POJO</strong> | 순수 Java 객체, 특정 기술에 묶이지 않음 |
+| <strong>IoC</strong> | 객체 생성·연결을 스프링이 담당 (제어권 역전) |
+| <strong>DI</strong> | 의존 객체를 외부에서 주입받음 |
+| <strong>AOP</strong> | 로깅·보안 등 공통 기능을 분리해서 관리 |
+| <strong>PSA</strong> | 기술을 추상화해서 교체해도 코드 유지 |
+| <strong>스프링 컨테이너</strong> | Bean을 생성·관리하는 IoC 컨테이너 |
+| <strong>스프링 부트</strong> | 스프링 초기 설정을 자동화해주는 도구 |
