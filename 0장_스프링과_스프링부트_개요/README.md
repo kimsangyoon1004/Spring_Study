@@ -1,10 +1,5 @@
 # 0장 - 스프링과 스프링부트 개요
 
-> **참고 자료**
-> - [코드스테이츠 - 스프링과 스프링부트](https://www.codestates.com/blog/content/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8)
-> - [네이버 블로그 - 스프링 프레임워크 개념](https://m.blog.naver.com/seek316/222117116193)
-> - [GeeksforGeeks - Introduction to Spring Framework](https://www.geeksforgeeks.org/advance-java/introduction-to-spring-framework/)
-
 ---
 
 ## 1. 스프링(Spring)이란?
